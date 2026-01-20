@@ -95,11 +95,14 @@ class ExportScaledImage(Gimp.PlugIn):
             )
 
         var_mapping = {
+            "current_dir": os.getcwd(),
             "parent_dir": src_file.get_parent().get_path(),
             "basename": Path(src_file.get_basename()).stem
         }
 
         parsed_dest_path = Template(dest_path).substitute(var_mapping)
+        Gimp.message(f"File will be exported to '{parsed_dest_path}'.")
+
         dest_ext = os.path.splitext(parsed_dest_path)[1]
         dest_type = EXT_TYPE_DICT.get(dest_ext.lower()) or dest_ext.removeprefix(".").lower()
 
