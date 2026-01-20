@@ -23,12 +23,16 @@ See the LICENSE file for details.
 
 ## Version
 
-Current version: **0.1.0**
+Current version: **0.1.1**
 
 The official version is defined by the Git tag on GitHub.
 This plug-in is distributed as source code only.
 
 ## Changelog
+
+### 0.1.1 - 2026-01-21
+
+- Added support for the `${current_dir}` variable in **Exported file path**
 
 ### 0.1.0 - 2026-01-21
 
